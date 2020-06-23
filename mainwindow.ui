@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>977</width>
+    <height>574</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">#centralWidget{
+border-image: url(:/images/images/back_ground.jpeg);}</string>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>977</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionConectar"/>
+    <addaction name="separator"/>
+    <addaction name="actionSair"/>
+   </widget>
+   <widget class="QMenu" name="menuClientes">
+    <property name="title">
+     <string>Clientes</string>
+    </property>
+    <widget class="QMenu" name="menuPesquisar">
+     <property name="title">
+      <string>Pesquisar</string>
+     </property>
+     <addaction name="action_Pesquisar_Pessoa_Fisica"/>
+     <addaction name="action_Pesquisar_Pessoa_Juridica"/>
+    </widget>
+    <widget class="QMenu" name="menuCadastrar">
+     <property name="title">
+      <string>Cadastrar</string>
+     </property>
+     <addaction name="action_Cadastrar_Pessoa_Fisica"/>
+     <addaction name="action_Cadastrar_Pessoa_Juridica"/>
+    </widget>
+    <addaction name="menuPesquisar"/>
+    <addaction name="menuCadastrar"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuClientes"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionConectar">
+   <property name="text">
+    <string>Conectar</string>
+   </property>
+  </action>
+  <action name="actionSair">
+   <property name="text">
+    <string>Sair</string>
+   </property>
+  </action>
+  <action name="action_Pesquisar_Pessoa_Fisica">
+   <property name="text">
+    <string>Pessoa Fisica</string>
+   </property>
+  </action>
+  <action name="action_Pesquisar_Pessoa_Juridica">
+   <property name="text">
+    <string>Pessoa Juridica</string>
+   </property>
+  </action>
+  <action name="action_Cadastrar_Pessoa_Fisica">
+   <property name="text">
+    <string>Pessoa Fisica</string>
+   </property>
+  </action>
+  <action name="action_Cadastrar_Pessoa_Juridica">
+   <property name="text">
+    <string>Pessoa Juridica</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
