@@ -17,7 +17,9 @@ registerclientpf::registerclientpf(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    fields_pf << ui->inss << ui->pispasep << ui->tratamento << ui->nome << ui->sobrenome
+    setWindowTitle("Registro de Cliente - Pessoa Física");
+
+    fields_pf << ui->inss << ui->pispasep << ui->tratamento << ui->nome
               << ui->estado_civil << ui->profissao << ui->nascimento << ui->nome_da_mae
               << ui->rg << ui->endereco << ui->nr << ui->complemento << ui->bairro
               << ui->cidade << ui->estado << ui->cep << ui->pais << ui->telefone << ui->celular;
@@ -28,10 +30,16 @@ registerclientpf::~registerclientpf()
     delete ui;
 }
 
+void registerclientpf::setFoundCPF(QString str)
+{
+    ui->cpf->setText(str);
+}
+
 void registerclientpf::on_pesquisar_client_clicked()
 {
     searchclientspf * search_clientspf = new searchclientspf(this);
     search_clientspf -> exec();
+    close();
 }
 
 void registerclientpf::on_deleteAllButton_clicked()
@@ -51,7 +59,7 @@ void registerclientpf::on_salvar_clicked()
     // Open database:
     QSqlQuery query(db);
 
-    if (ui->cpf->text() == "..-" || ui->tratamento->text() == "" || ui->nome->text() == "" || ui->sobrenome->text() == ""
+    if (ui->cpf->text() == "..-" || ui->tratamento->text() == "" || ui->nome->text() == ""
             || ui->estado_civil->text() == "" || ui->profissao->text() == "" || ui->nascimento->text() == "--"
             || ui->rg->text() == "" || ui->endereco->text() == "" || ui->nr->text() == "" || ui->bairro->text() == ""
             || ui->cidade->text() == "" || ui->cep->text() == "" || ui->pais->text() == "" || ui->celular->text() == "")
@@ -89,10 +97,10 @@ void registerclientpf::on_salvar_clicked()
 
             else    //doesn't exist a register with input cpf:
             {
-                sqlCommand = "INSERT INTO `clients_PF` (`tratamento`, `nome`, `sobrenome`, `estado_civil`, `profissao`, "
+                sqlCommand = "INSERT INTO `clients_PF` (`tratamento`, `nome`, `estado_civil`, `profissao`, "
                              "`nascimento`, `nome_da_mae`, `rg`, `cpf`, `inss`, `pispasep`, `endereco`, `nr`, `complemento`, "
                              "`bairro`, `cidade`, `estado`, `cep`, `pais`, `telefone`, `celular`) VALUES ('"
-                        +ui->tratamento->text()+ "', '" +ui->nome->text()+ "', '" +ui->sobrenome->text()+
+                        +ui->tratamento->text()+ "', '" +ui->nome->text()+
                         "', '" +ui->estado_civil->text()+ "', '" +ui->profissao->text()+ "', '" +ui->nascimento->text()+
                         "', '" +ui->nome_da_mae->text()+ "', '" +ui->rg->text()+ "', '" +ui->cpf->text()+ "', '" +ui->inss->text()+
                         "', '" +ui->pispasep->text()+ "', '" +ui->endereco->text()+ "', '" +ui->nr->text()+ "', '" +ui->complemento->text()+

@@ -29,9 +29,13 @@ private slots:
 
 private:
     Ui::registerclientpf *ui;
+
     QSqlDatabase db;
     QString sqlCommand;
     QVector<QLineEdit *> fields_pf;
+
+public:
+    void setFoundCPF(QString str);
 };
 
 #endif // REGISTERCLIENTPF_H

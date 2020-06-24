@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>900</width>
-    <height>435</height>
+    <width>912</width>
+    <height>390</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <widget class="QGroupBox" name="groupBox_2">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>420</x>
      <y>0</y>
      <width>388</width>
      <height>350</height>
@@ -407,8 +407,8 @@
     <rect>
      <x>9</x>
      <y>-1</y>
-     <width>385</width>
-     <height>381</height>
+     <width>411</width>
+     <height>341</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -422,6 +422,18 @@
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QLabel" name="labelTratamento">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>25</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <weight>75</weight>
@@ -435,6 +447,18 @@
       </item>
       <item>
        <widget class="QLabel" name="labelNome">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>25</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <weight>75</weight>
@@ -442,25 +466,24 @@
          </font>
         </property>
         <property name="text">
-         <string>Nome*:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="labelSobrenome">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Sobrenome*:</string>
+         <string>Nome Completo*:</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QLabel" name="labelEstadoCivil">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>25</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <weight>75</weight>
@@ -474,6 +497,18 @@
       </item>
       <item>
        <widget class="QLabel" name="labelProfissao">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>25</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <weight>75</weight>
@@ -487,6 +522,18 @@
       </item>
       <item>
        <widget class="QLabel" name="labelNascimento">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>25</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <weight>75</weight>
@@ -500,6 +547,18 @@
       </item>
       <item>
        <widget class="QLabel" name="labelNomeDaMae">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>25</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <weight>75</weight>
@@ -513,6 +572,18 @@
       </item>
       <item>
        <widget class="QLabel" name="labelCPF">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>25</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <weight>75</weight>
@@ -526,6 +597,18 @@
       </item>
       <item>
        <widget class="QLabel" name="labelRG">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>25</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <weight>75</weight>
@@ -539,6 +622,18 @@
       </item>
       <item>
        <widget class="QLabel" name="labelINSS">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>25</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <weight>75</weight>
@@ -552,6 +647,18 @@
       </item>
       <item>
        <widget class="QLabel" name="labelPisPasep">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>25</height>
+         </size>
+        </property>
         <property name="font">
          <font>
           <weight>75</weight>
@@ -572,13 +679,13 @@
         <property name="minimumSize">
          <size>
           <width>40</width>
-          <height>0</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>40</width>
-          <height>16777215</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maxLength">
@@ -590,40 +697,18 @@
        <widget class="QLineEdit" name="nome">
         <property name="minimumSize">
          <size>
-          <width>200</width>
-          <height>0</height>
+          <width>250</width>
+          <height>25</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>200</width>
-          <height>16777215</height>
+          <width>250</width>
+          <height>25</height>
          </size>
         </property>
         <property name="maxLength">
-         <number>20</number>
-        </property>
-        <property name="cursorPosition">
-         <number>0</number>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="sobrenome">
-        <property name="minimumSize">
-         <size>
-          <width>200</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>200</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="maxLength">
-         <number>20</number>
+         <number>40</number>
         </property>
         <property name="cursorPosition">
          <number>0</number>
@@ -635,13 +720,13 @@
         <property name="minimumSize">
          <size>
           <width>200</width>
-          <height>0</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>200</width>
-          <height>16777215</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maxLength">
@@ -657,13 +742,13 @@
         <property name="minimumSize">
          <size>
           <width>200</width>
-          <height>0</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>200</width>
-          <height>16777215</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maxLength">
@@ -679,13 +764,13 @@
         <property name="minimumSize">
          <size>
           <width>100</width>
-          <height>0</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>100</width>
-          <height>16777215</height>
+          <height>25</height>
          </size>
         </property>
         <property name="inputMask">
@@ -701,13 +786,13 @@
         <property name="minimumSize">
          <size>
           <width>250</width>
-          <height>0</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>250</width>
-          <height>16777215</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maxLength">
@@ -723,13 +808,13 @@
         <property name="minimumSize">
          <size>
           <width>150</width>
-          <height>0</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>150</width>
-          <height>16777215</height>
+          <height>25</height>
          </size>
         </property>
         <property name="inputMask">
@@ -748,13 +833,13 @@
         <property name="minimumSize">
          <size>
           <width>150</width>
-          <height>0</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>150</width>
-          <height>16777215</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maxLength">
@@ -770,13 +855,13 @@
         <property name="minimumSize">
          <size>
           <width>150</width>
-          <height>0</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>150</width>
-          <height>16777215</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maxLength">
@@ -792,13 +877,13 @@
         <property name="minimumSize">
          <size>
           <width>150</width>
-          <height>0</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
           <width>150</width>
-          <height>16777215</height>
+          <height>25</height>
          </size>
         </property>
         <property name="maxLength">
@@ -816,7 +901,7 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>800</x>
+     <x>810</x>
      <y>0</y>
      <width>95</width>
      <height>154</height>
@@ -875,7 +960,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>390</y>
+     <y>340</y>
      <width>438</width>
      <height>42</height>
     </rect>

@@ -17,6 +17,8 @@ registerclientpj::registerclientpj(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    setWindowTitle("Registro de Cliente - Pessoa Jurídica");
+
     fields_pj << ui->pj_bairro << ui->pj_cargo << ui->pj_celular << ui->pj_cep << ui->pj_cidade
               << ui->pj_complemento << ui->pj_cpf << ui->pj_endereco << ui->pj_estado << ui->pj_ie
               << ui->pj_irpj << ui->pj_nire << ui->pj_nome_do_adm << ui->pj_nr << ui->pj_pais
@@ -28,10 +30,16 @@ registerclientpj::~registerclientpj()
     delete ui;
 }
 
+void registerclientpj::setFoundCNPJ(QString str)
+{
+    ui->pj_cnpj->setText(str);
+}
+
 void registerclientpj::on_pesquisar_client_clicked()
 {
     searchclientspj * searchclientspj_ = new searchclientspj(this);
     searchclientspj_ -> exec();
+    close();
 }
 
 void registerclientpj::on_deleteAllButton_clicked()

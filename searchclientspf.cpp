@@ -14,12 +14,14 @@
 // Other libraries:
 #include<QDebug>
 #include <QMessageBox>
+#include <QApplication>
 
 searchclientspf::searchclientspf(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::searchclientspf)
 {
     ui->setupUi(this);
+    setWindowTitle("Pesquisar Cliente - Pessoa Física");
 }
 
 searchclientspf::~searchclientspf()
@@ -28,36 +30,43 @@ searchclientspf::~searchclientspf()
 }
 
 void searchclientspf::on_searchButton_clicked()
-{
+{   
+    if (ui->searchName -> text() == "")
+    {
+        QMessageBox::critical(this, "Campo obrigatório não preenchido", "O campo nome não pode estar em branco.");
+    }
+    else
+    {
     // Conectando ao banco de dados:
     QSqlQuery query(db);
 
     QString searchName = ui -> searchName -> text();
-    QString searchSurname = ui -> searchSurname -> text();
 
     // Comando SQL:
-    sqlCommand = "SELECT nome, sobrenome, cpf, nascimento, telefone, celular FROM `clients_PF` WHERE `nome` LIKE '%"
-            +searchName+ "%' OR `sobrenome` LIKE '%" +searchSurname+ "%'";
+    sqlCommand = "SELECT nome, cpf, nascimento, telefone, celular FROM `clients_PF` WHERE `nome` LIKE '%"
+            +searchName+ "%'";
+
     query.exec(sqlCommand);
 
     QSqlQueryModel *model = new QSqlQueryModel;
     model -> setQuery(query);
+
     ui -> searchTable -> setModel(model);
+    ui -> searchTable -> resizeColumnsToContents();
 
     qDebug() << query.lastError();
+    }
 }
 
 void searchclientspf::on_searchTable_doubleClicked(const QModelIndex &index)
 {
     QVariant searchCPF = ui -> searchTable -> model() -> data(index);
+    foundCPF = searchCPF.toString();
 
-    /*
-    if (searchCPF == QVariant(QString, "336.062.718-08"))
-    {
-        foundCPF = searchCPF;
-        registerClientDialog * register_client = new registerClientDialog(this);
-        register_client -> exec();
-    }*/
+    //registerclientpf setFoundCPF(foundCPF)
 
-    qDebug() << searchCPF.toString();
+    registerclientpf * registerclientpf_ = new registerclientpf(this);
+    registerclientpf_ -> setFoundCPF(foundCPF);
+    registerclientpf_ -> exec();
+    close();
 }

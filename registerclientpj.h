@@ -32,6 +32,9 @@ private:
     QSqlDatabase db;
     QString sqlCommand;
     QVector<QLineEdit *> fields_pj;
+
+public:
+    void setFoundCNPJ(QString str);
 };
 
 #endif // REGISTERCLIENTPJ_H

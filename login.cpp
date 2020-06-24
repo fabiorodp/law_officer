@@ -15,6 +15,7 @@ login::login(QWidget *parent) :
     ui(new Ui::login)
 {
     ui->setupUi(this);
+    setWindowTitle("Conectar ao banco de dados");
 }
 
 login::~login()

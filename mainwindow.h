@@ -33,6 +33,7 @@ private:
     Ui::MainWindow *ui;
 
     QSqlDatabase db;
+    QString foundCPF;
 };
 
 #endif // MAINWINDOW_H

@@ -23,8 +23,6 @@ private:
 
     QSqlDatabase db;
     QString sqlCommand;
-
-public:
     QString foundCPF;
 
 private slots:

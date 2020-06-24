@@ -2,6 +2,7 @@
 #define SEARCHCLIENTSPJ_H
 
 #include <QDialog>
+#include <QSqlDatabase>
 
 namespace Ui {
 class searchclientspj;
@@ -15,8 +16,16 @@ public:
     explicit searchclientspj(QWidget *parent = 0);
     ~searchclientspj();
 
+private slots:
+    void on_searchButtonPJ_clicked();
+
+    void on_searchTablePJ_doubleClicked(const QModelIndex &index);
+
 private:
     Ui::searchclientspj *ui;
+    QSqlDatabase db;
+    QString sqlCommand;
+    QString foundCNPJ;
 };
 
 #endif // SEARCHCLIENTSPJ_H
