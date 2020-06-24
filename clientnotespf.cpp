@@ -20,6 +20,8 @@ clientnotespf::clientnotespf(QWidget *parent) :
     ui(new Ui::clientnotespf)
 {
     ui->setupUi(this);
+
+    setWindowTitle("Pesquisa e/ou anotações para clientes pessoa física");
 }
 
 clientnotespf::~clientnotespf()

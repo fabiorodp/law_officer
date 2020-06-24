@@ -20,6 +20,8 @@ clientnotespj::clientnotespj(QWidget *parent) :
     ui(new Ui::clientnotespj)
 {
     ui->setupUi(this);
+
+    setWindowTitle("Pesquisa e/ou anotações para clientes pessoa jurídica");
 }
 
 clientnotespj::~clientnotespj()
