@@ -30,7 +30,9 @@ SOURCES += \
     registerclientpf.cpp \
     registerclientpj.cpp \
     searchclientspf.cpp \
-    searchclientspj.cpp
+    searchclientspj.cpp \
+    clientnotespf.cpp \
+    clientnotespj.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -38,7 +40,9 @@ HEADERS += \
     registerclientpf.h \
     registerclientpj.h \
     searchclientspf.h \
-    searchclientspj.h
+    searchclientspj.h \
+    clientnotespf.h \
+    clientnotespj.h
 
 FORMS += \
         mainwindow.ui \
@@ -46,7 +50,9 @@ FORMS += \
     registerclientpf.ui \
     registerclientpj.ui \
     searchclientspf.ui \
-    searchclientspj.ui
+    searchclientspj.ui \
+    clientnotespf.ui \
+    clientnotespj.ui
 
 RESOURCES += \
     images.qrc

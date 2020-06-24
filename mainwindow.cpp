@@ -1,10 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "login.h"
-#include "searchclientspf.h"
-#include "searchclientspj.h"
 #include "registerclientpf.h"
 #include "registerclientpj.h"
+#include "clientnotespf.h"
+#include "clientnotespj.h"
 
 #include <QApplication>
 
@@ -33,18 +33,6 @@ void MainWindow::on_actionConectar_triggered()
     login_ -> exec();
 }
 
-void MainWindow::on_action_Pesquisar_Pessoa_Fisica_triggered()
-{
-    searchclientspf * searchclientspf_ = new searchclientspf(this);
-    searchclientspf_ -> exec();
-}
-
-void MainWindow::on_action_Pesquisar_Pessoa_Juridica_triggered()
-{
-    searchclientspj * searchclientspj_ = new searchclientspj(this);
-    searchclientspj_ -> exec();
-}
-
 void MainWindow::on_action_Cadastrar_Pessoa_Fisica_triggered()
 {
     registerclientpf * registerclientpf_ = new registerclientpf(this);
@@ -55,4 +43,16 @@ void MainWindow::on_action_Cadastrar_Pessoa_Juridica_triggered()
 {
     registerclientpj * registerclientpj_ = new registerclientpj(this);
     registerclientpj_ -> exec();
+}
+
+void MainWindow::on_action_Notes_Pessoa_Fisica_triggered()
+{
+    clientnotespf * clientnotespf_ = new clientnotespf(this);
+    clientnotespf_ -> exec();
+}
+
+void MainWindow::on_action_Notes_Pessoa_Juridica_triggered()
+{
+    clientnotespj * clientnotespj_ = new clientnotespj(this);
+    clientnotespj_ -> exec();
 }

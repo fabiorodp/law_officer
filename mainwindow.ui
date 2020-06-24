@@ -40,13 +40,6 @@ border-image: url(:/images/images/back_ground.jpeg);}</string>
     <property name="title">
      <string>Clientes</string>
     </property>
-    <widget class="QMenu" name="menuPesquisar">
-     <property name="title">
-      <string>Pesquisar</string>
-     </property>
-     <addaction name="action_Pesquisar_Pessoa_Fisica"/>
-     <addaction name="action_Pesquisar_Pessoa_Juridica"/>
-    </widget>
     <widget class="QMenu" name="menuCadastrar">
      <property name="title">
       <string>Cadastrar</string>
@@ -54,7 +47,14 @@ border-image: url(:/images/images/back_ground.jpeg);}</string>
      <addaction name="action_Cadastrar_Pessoa_Fisica"/>
      <addaction name="action_Cadastrar_Pessoa_Juridica"/>
     </widget>
-    <addaction name="menuPesquisar"/>
+    <widget class="QMenu" name="menuPesquisa_e_Anota_es">
+     <property name="title">
+      <string>Pesquisa e Anotações</string>
+     </property>
+     <addaction name="action_Notes_Pessoa_Fisica"/>
+     <addaction name="action_Notes_Pessoa_Juridica"/>
+    </widget>
+    <addaction name="menuPesquisa_e_Anota_es"/>
     <addaction name="menuCadastrar"/>
    </widget>
    <addaction name="menuFile"/>
@@ -71,22 +71,22 @@ border-image: url(:/images/images/back_ground.jpeg);}</string>
     <string>Sair</string>
    </property>
   </action>
-  <action name="action_Pesquisar_Pessoa_Fisica">
-   <property name="text">
-    <string>Pessoa Fisica</string>
-   </property>
-  </action>
-  <action name="action_Pesquisar_Pessoa_Juridica">
-   <property name="text">
-    <string>Pessoa Juridica</string>
-   </property>
-  </action>
   <action name="action_Cadastrar_Pessoa_Fisica">
    <property name="text">
     <string>Pessoa Fisica</string>
    </property>
   </action>
   <action name="action_Cadastrar_Pessoa_Juridica">
+   <property name="text">
+    <string>Pessoa Juridica</string>
+   </property>
+  </action>
+  <action name="action_Notes_Pessoa_Fisica">
+   <property name="text">
+    <string>Pessoa Fisica</string>
+   </property>
+  </action>
+  <action name="action_Notes_Pessoa_Juridica">
    <property name="text">
     <string>Pessoa Juridica</string>
    </property>

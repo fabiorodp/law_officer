@@ -21,19 +21,18 @@ private slots:
 
     void on_actionConectar_triggered();
 
-    void on_action_Pesquisar_Pessoa_Fisica_triggered();
-
-    void on_action_Pesquisar_Pessoa_Juridica_triggered();
-
     void on_action_Cadastrar_Pessoa_Fisica_triggered();
 
     void on_action_Cadastrar_Pessoa_Juridica_triggered();
+
+    void on_action_Notes_Pessoa_Fisica_triggered();
+
+    void on_action_Notes_Pessoa_Juridica_triggered();
 
 private:
     Ui::MainWindow *ui;
 
     QSqlDatabase db;
-    QString foundCPF;
 };
 
 #endif // MAINWINDOW_H
