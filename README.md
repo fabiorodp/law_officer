@@ -9,4 +9,5 @@ Features:
 - Quick search for clients and companies.
 
 V1.0.1:
-- Fixed some syntax mistakes.
+- Fixed some syntax mistakes;
+- User can input notes for each client or company.
