@@ -31,12 +31,13 @@ void login::on_loginButton_clicked()
     // Connecting to the database:
     QString ipadress = ui -> ipadress -> text();
     QString port = ui -> port -> text();
+    QString dbName = ui -> db_name -> text();
     QString user = ui -> userInput -> text();
     QString pass = ui -> passwordInput -> text();
 
-    db.setHostName("127.0.0.1");
+    db.setHostName(ipadress);
     db.setPort(3306);
-    db.setDatabaseName("FRPAdv");
+    db.setDatabaseName(dbName);
     db.setUserName(user);
     db.setPassword(pass);
 

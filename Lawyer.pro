@@ -32,7 +32,8 @@ SOURCES += \
     searchclientspf.cpp \
     searchclientspj.cpp \
     clientnotespf.cpp \
-    clientnotespj.cpp
+    clientnotespj.cpp \
+    peticoes.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -42,7 +43,8 @@ HEADERS += \
     searchclientspf.h \
     searchclientspj.h \
     clientnotespf.h \
-    clientnotespj.h
+    clientnotespj.h \
+    peticoes.h
 
 FORMS += \
         mainwindow.ui \
@@ -52,7 +54,8 @@ FORMS += \
     searchclientspf.ui \
     searchclientspj.ui \
     clientnotespf.ui \
-    clientnotespj.ui
+    clientnotespj.ui \
+    peticoes.ui
 
 RESOURCES += \
     images.qrc
