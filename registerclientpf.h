@@ -1,6 +1,8 @@
 #ifndef REGISTERCLIENTPF_H
 #define REGISTERCLIENTPF_H
 
+#include "login.h"
+
 #include <QDialog>
 #include <QSqlDatabase>
 #include <QVector>
@@ -33,6 +35,7 @@ private:
     QSqlDatabase db;
     QString sqlCommand;
     QVector<QLineEdit *> fields_pf;
+    login lg;
 
 public:
     void setFoundCPF(QString str);

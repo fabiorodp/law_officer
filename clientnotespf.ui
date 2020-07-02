@@ -100,7 +100,7 @@
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>75</height>
+            <height>70</height>
            </size>
           </property>
           <property name="maximumSize">
@@ -138,11 +138,35 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label_notespf_1">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Anotação registrada no CPF:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_input_cpf">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
        <widget class="QTableView" name="tableView_notespf_ultimas_anotacoes">
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>150</height>
+          <height>100</height>
          </size>
         </property>
         <attribute name="horizontalHeaderVisible">
@@ -181,30 +205,6 @@
       <string>Nova anotação (máx. 300 caracteres):</string>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QLabel" name="label_notespf_1">
-          <property name="font">
-           <font>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>A sua anotação vai ser registrada no CPF:</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_input_cpf">
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
       <item>
        <widget class="QTextEdit" name="textEdit_notespf">
         <property name="maximumSize">

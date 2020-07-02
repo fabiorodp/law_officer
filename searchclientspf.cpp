@@ -38,6 +38,7 @@ void searchclientspf::on_searchButton_clicked()
     else
     {
     // Conectando ao banco de dados:
+    lg.connOpen();
     QSqlQuery query(db);
 
     QString searchName = ui -> searchName -> text();
@@ -56,6 +57,7 @@ void searchclientspf::on_searchButton_clicked()
 
     qDebug() << query.lastError();
     }
+    lg.connClose();
 }
 
 void searchclientspf::on_searchTable_doubleClicked(const QModelIndex &index)

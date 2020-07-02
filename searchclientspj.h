@@ -1,6 +1,8 @@
 #ifndef SEARCHCLIENTSPJ_H
 #define SEARCHCLIENTSPJ_H
 
+#include "login.h"
+
 #include <QDialog>
 #include <QSqlDatabase>
 
@@ -26,6 +28,7 @@ private:
     QSqlDatabase db;
     QString sqlCommand;
     QString foundCNPJ;
+    login lg;
 };
 
 #endif // SEARCHCLIENTSPJ_H

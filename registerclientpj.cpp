@@ -57,6 +57,7 @@ void registerclientpj::on_deleteAllButton_clicked()
 void registerclientpj::on_salvar_clicked()
 {
     // Open database:
+    lg.connOpen();
     QSqlQuery query(db);
 
     if (ui->pj_razao_social->text() == "" || ui->pj_ie->text() == "" || ui->pj_cnpj->text() == "../-" || ui->pj_nome_do_adm->text() == ""
@@ -117,11 +118,13 @@ void registerclientpj::on_salvar_clicked()
             }
         }
     }
+    lg.connClose();
 }
 
 void registerclientpj::on_pj_cnpj_returnPressed()
 {
     // Conectando ao banco de dados:
+    lg.connOpen();
     QSqlQuery query(db);
 
     // Comando SQL:
@@ -160,4 +163,5 @@ void registerclientpj::on_pj_cnpj_returnPressed()
             QMessageBox::information(this, "Cliente não encontrado", "Não foi possível encontrar o CNPJ fornecido.");
         }
     }
+    lg.connClose();
 }

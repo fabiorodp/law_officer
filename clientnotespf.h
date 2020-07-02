@@ -1,6 +1,7 @@
 #ifndef CLIENTNOTESPF_H
 #define CLIENTNOTESPF_H
 
+#include "login.h"
 #include <QDialog>
 #include <QSqlDatabase>
 #include <QVector>
@@ -32,6 +33,7 @@ private:
     QSqlDatabase db;
     QString sqlCommand;
     QString found_value;
+    login lg;
 };
 
 #endif // CLIENTNOTESPF_H

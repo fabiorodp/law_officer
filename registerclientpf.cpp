@@ -57,6 +57,7 @@ void registerclientpf::on_deleteAllButton_clicked()
 void registerclientpf::on_salvar_clicked()
 {
     // Open database:
+    lg.connOpen();
     QSqlQuery query(db);
 
     if (ui->cpf->text() == "..-" || ui->tratamento->text() == "" || ui->nome->text() == ""
@@ -117,11 +118,13 @@ void registerclientpf::on_salvar_clicked()
             }
         }
     }
+    lg.connClose();
 }
 
 void registerclientpf::on_cpf_returnPressed()
-{
+{                
     // Conectando ao banco de dados:
+    lg.connOpen();
     QSqlQuery query(db);
 
     // Comando SQL:
@@ -160,4 +163,5 @@ void registerclientpf::on_cpf_returnPressed()
             QMessageBox::information(this, "Cliente não encontrado", "Não foi possível encontrar o CPF fornecido.");
         }
     }
+    lg.connClose();
 }

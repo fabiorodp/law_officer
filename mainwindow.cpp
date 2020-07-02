@@ -15,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     setWindowTitle("Página inicial do FRP Lawyer");
+
+    login * login_ = new login(this);
+    login_ -> exec();
 }
 
 MainWindow::~MainWindow()
@@ -25,12 +28,6 @@ MainWindow::~MainWindow()
 void MainWindow::on_actionSair_triggered()
 {
     QApplication::quit();
-}
-
-void MainWindow::on_actionConectar_triggered()
-{
-    login * login_ = new login(this);
-    login_ -> exec();
 }
 
 void MainWindow::on_action_Cadastrar_Pessoa_Fisica_triggered()

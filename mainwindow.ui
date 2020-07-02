@@ -18,6 +18,16 @@
     <string notr="true">#centralWidget{
 border-image: url(:/images/images/back_ground.jpeg);}</string>
    </property>
+   <widget class="QLineEdit" name="lineEditPermissao">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>113</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -35,7 +45,6 @@ border-image: url(:/images/images/back_ground.jpeg);}</string>
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionConectar"/>
     <addaction name="separator"/>
     <addaction name="actionSair"/>
    </widget>
@@ -64,11 +73,6 @@ border-image: url(:/images/images/back_ground.jpeg);}</string>
    <addaction name="menuClientes"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="actionConectar">
-   <property name="text">
-    <string>Conectar</string>
-   </property>
-  </action>
   <action name="actionSair">
    <property name="text">
     <string>Sair</string>

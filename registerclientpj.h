@@ -1,6 +1,8 @@
 #ifndef REGISTERCLIENTPJ_H
 #define REGISTERCLIENTPJ_H
 
+#include "login.h"
+
 #include <QDialog>
 #include <QSqlDatabase>
 #include <QVector>
@@ -32,6 +34,7 @@ private:
     QSqlDatabase db;
     QString sqlCommand;
     QVector<QLineEdit *> fields_pj;
+    login lg;
 
 public:
     void setFoundCNPJ(QString str);

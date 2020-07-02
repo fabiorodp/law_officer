@@ -23,34 +23,62 @@ login::~login()
     delete ui;
 }
 
-void login::on_loginButton_clicked()
+bool login::connOpen()
 {
-    // Declare db variable, in private, at mainwindow.h as: 'QSqlDatabase db;', then:
-    db = QSqlDatabase::addDatabase("QMYSQL");
+    db.close();
+    //db.removeDatabase(QSqlDatabase::defaultConnection);
 
     // Connecting to the database:
-    QString ipadress = ui -> ipadress -> text();
-    QString port = ui -> port -> text();
-    QString dbName = ui -> db_name -> text();
-    QString user = ui -> userInput -> text();
-    QString pass = ui -> passwordInput -> text();
+    user = ui -> userInput -> text();
+    pass = ui -> passwordInput -> text();
 
-    db.setHostName(ipadress);
+    // Declare db variable, in private, at mainwindow.h as: 'QSqlDatabase db;', then:
+    qDebug() << user;
+    db = QSqlDatabase::addDatabase("QMYSQL");
+
+    db.setHostName("");
     db.setPort(3306);
-    db.setDatabaseName(dbName);
-    db.setUserName(user);
-    db.setPassword(pass);
+    db.setDatabaseName("");
+    db.setUserName("");
+    db.setPassword("");
 
     // Checking if it connects successfully:
     if (db.open())
     {
         qDebug() << "Database Connected.";
-        QMessageBox::information(this, "Login successful", "Login successful.");
-        hide();
+        return true;
     }
     else
     {
         qDebug() << "Failed to connect to the database.";
+        return false;
+    }
+}
+
+void login::connClose()
+{
+    db.close();
+    //db.removeDatabase(QSqlDatabase::defaultConnection);
+}
+
+void login::on_loginButton_clicked()
+{
+    user = ui -> userInput -> text();
+    pass = ui -> passwordInput -> text();
+
+    //connOpen();
+    //QString sqlcommand = "SELECT * FROM users WHERE user_name="+user+" AND user_pass=" +pass+"";
+    //QSqlQuery query(db);
+    //query.exec(sqlcommand);
+
+    if (user == "Fabio" && pass == "test123")
+    {
+        connOpen();
+        QMessageBox::information(this, "Login successful", "Login successful.");
+        close();
+    }
+    else
+    {
         QMessageBox::information(this, "Login failed.", "Username or password invalid.");
     }
 }

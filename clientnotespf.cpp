@@ -38,6 +38,7 @@ void clientnotespf::on_encontrar_cliente_button_clicked()
     else
     {
     // Conectando ao banco de dados:
+    lg.connOpen();
     QSqlQuery query(db);
 
     QString notesName = ui -> lineedit_notes_nome -> text();
@@ -57,6 +58,7 @@ void clientnotespf::on_encontrar_cliente_button_clicked()
 
     qDebug() << query.lastError();
     }
+    lg.connClose();
 }
 
 void clientnotespf::on_tableview_notespf_clients_doubleClicked(const QModelIndex &index)
@@ -66,6 +68,7 @@ void clientnotespf::on_tableview_notespf_clients_doubleClicked(const QModelIndex
 
     if (found_value[3]=="." && found_value[7]=="." && found_value[11]=="-")
     {
+        lg.connOpen();
         // Conectando ao banco de dados:
         QSqlQuery query(db);
 
@@ -82,11 +85,13 @@ void clientnotespf::on_tableview_notespf_clients_doubleClicked(const QModelIndex
         ui -> tableView_notespf_ultimas_anotacoes -> resizeColumnsToContents();
         ui -> label_input_cpf -> setText(found_value);
     }
+    lg.connClose();
 }
 
 void clientnotespf::on_pushButton_notespf_salvar_clicked()
 {
     // Open database:
+    lg.connOpen();
     QSqlQuery query(db);
 
     if (ui->textEdit_notespf->toPlainText() == "")
@@ -111,6 +116,7 @@ void clientnotespf::on_pushButton_notespf_salvar_clicked()
             close();
         }
     }
+    lg.connClose();
 }
 
 void clientnotespf::on_tableView_notespf_ultimas_anotacoes_doubleClicked(const QModelIndex &index)
@@ -125,6 +131,7 @@ void clientnotespf::on_tableView_notespf_ultimas_anotacoes_doubleClicked(const Q
         if (ret == QMessageBox::Ok)
         {
             // Open database:
+            lg.connOpen();
             QSqlQuery query(db);
 
             sqlCommand = "DELETE FROM `anotacoes_PF` WHERE `anotacoes_PF`.`date` = \'" +del+ "\'";
@@ -142,4 +149,5 @@ void clientnotespf::on_tableView_notespf_ultimas_anotacoes_doubleClicked(const Q
             }
         }
     }
+    lg.connClose();
 }

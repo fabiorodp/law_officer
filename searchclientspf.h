@@ -1,6 +1,8 @@
 #ifndef SEARCHCLIENTSPF_H
 #define SEARCHCLIENTSPF_H
 
+#include "login.h"
+
 #include <QDialog>
 #include <QSqlDatabase>
 #include <QVector>
@@ -24,6 +26,7 @@ private:
     QSqlDatabase db;
     QString sqlCommand;
     QString foundCPF;
+    login lg;
 
 private slots:
     void on_searchButton_clicked();

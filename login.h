@@ -1,5 +1,6 @@
 #ifndef LOGIN_H
 #define LOGIN_H
+#include "mainwindow.h"
 
 #include <QDialog>
 #include <QSqlDatabase>
@@ -22,8 +23,17 @@ private slots:
 
 private:
     Ui::login *ui;
+    QString ipadress;
+    QString port;
+    QString dbName;
+    QString user;
+    QString pass;
+    MainWindow mw;
 
+public:
     QSqlDatabase db;
+    void connClose();
+    bool connOpen();
 };
 
 #endif // LOGIN_H

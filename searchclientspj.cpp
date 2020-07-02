@@ -38,6 +38,7 @@ void searchclientspj::on_searchButtonPJ_clicked()
     else
     {
     // Conectando ao banco de dados:
+    lg.connOpen();
     QSqlQuery query(db);
 
     QString searchRazaoSocial = ui -> search_razao_social -> text();
@@ -56,6 +57,7 @@ void searchclientspj::on_searchButtonPJ_clicked()
 
     qDebug() << query.lastError();
     }
+    lg.connClose();
 }
 
 void searchclientspj::on_searchTablePJ_doubleClicked(const QModelIndex &index)

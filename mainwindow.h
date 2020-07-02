@@ -19,8 +19,6 @@ public:
 private slots:
     void on_actionSair_triggered();
 
-    void on_actionConectar_triggered();
-
     void on_action_Cadastrar_Pessoa_Fisica_triggered();
 
     void on_action_Cadastrar_Pessoa_Juridica_triggered();
@@ -32,7 +30,9 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-    QSqlDatabase db;
+public:
+    QString permissao;
+    void setPermissao(QString permissao);
 };
 
 #endif // MAINWINDOW_H
