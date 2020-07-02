@@ -32,7 +32,7 @@ private:
 
 public:
     QString permissao;
-    void setPermissao(QString permissao);
+    //void setPermissao(QString permissao);
 };
 
 #endif // MAINWINDOW_H

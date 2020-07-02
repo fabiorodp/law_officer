@@ -1,6 +1,6 @@
 #ifndef LOGIN_H
 #define LOGIN_H
-#include "mainwindow.h"
+//#include "mainwindow.h"
 
 #include <QDialog>
 #include <QSqlDatabase>
@@ -28,7 +28,7 @@ private:
     QString dbName;
     QString user;
     QString pass;
-    MainWindow mw;
+    //MainWindow mw;
 
 public:
     QSqlDatabase db;
